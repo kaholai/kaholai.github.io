@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Kaho Lai's Blog]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-03-28T16:16:08.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[Kaho Lai]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[FE SEO优化的Tips]]></title>
+    <link href="http://yoursite.com/2015/03/29/how-to-seo/"/>
+    <id>http://yoursite.com/2015/03/29/how-to-seo/</id>
+    <published>2015-03-28T16:08:44.000Z</published>
+    <updated>2015-03-28T16:16:08.000Z</updated>
+    <content type="html"><![CDATA[<p>[TOC]</p>
+<blockquote>
+<p>Seo目标有两个，让用户更快获取我们的网站； 让搜索引擎爬虫更好地“阅读”我们的网站，抓取正确的关键字。</p>
+</blockquote>
+<h2 id="-HTML">-HTML</h2><blockquote>
+<ul>
+<li>定义Head头标签 <a href="http://fex.baidu.com/blog/2014/10/html-head-tags/" target="_blank" rel="external">点击，阅读详情</a><br>作用：</li>
+</ul>
+<ol>
+<li>定义IE使用最新版本，而不是兼容模式</li>
+<li>定义双核浏览器使用chrome极速内核</li>
+<li>禁止手机百度访问网站时进行转码</li>
+<li>定义页面关键字</li>
+<li>定义网站在iOS发送到桌面的图标，</li>
+</ol>
+<ul>
+<li><p>闭合检查<br>作用：<br>浏览器编译器遇到一个标签时，就开始寻找它的结束标签，直到它匹配上,才能显示它的内容， 所以当表，ur等容器形式的标签嵌套很多时,打开页面就会特别慢,这样就降低了用户体验了。<br>工具： <a href="http://weibotuchuang.sinaapp.com/tagerror/example/haserror.html" target="_blank" rel="external">标签闭合检测bookmark脚本</a></p>
+</li>
+<li><p>图片，flash 增加alt标签，特出图片的关键字</p>
+</li>
+<li>网站内部链接、合作伙伴的链接不要使用 no-follow属性<br><a href="http://lusongsong.com/reed/397.html" target="_blank" rel="external">点击查看</a></li>
+</ul>
+</blockquote>
+<h2 id="-CSS">-CSS</h2><blockquote>
+<ul>
+<li><p>不使用全局Rest<br>不同浏览器元素的默认属性有所不同，使用Reset可重置浏览器元素的一些默认属性，以达到浏览器的兼容。但需要注意的是，请不要使用全局Reset， *{margin:0;padding:0;} 这不仅仅因为它是缓慢和低效率的方法，而且还会导致一些不必要的元素也重置了外边距和内边距。在此建议参考YUI Reset和Eric Meyer的做法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 清除内外边距 **/</span></span><br><span class="line"><span class="tag">body</span>, <span class="tag">h1</span>, <span class="tag">h2</span>, <span class="tag">h3</span>, <span class="tag">h4</span>, <span class="tag">h5</span>, <span class="tag">h6</span>, <span class="tag">hr</span>, <span class="tag">p</span>,  <span class="tag">blockquote</span>, <span class="comment">/* structural elements 结构元素 */</span>  <span class="tag">dl</span>, <span class="tag">dt</span>, <span class="tag">dd</span>, <span class="tag">ul</span>, <span class="tag">ol</span>, <span class="tag">li</span>, <span class="tag">pre</span>,<span class="tag">form</span>, <span class="tag">fieldset</span>, <span class="tag">legend</span>, <span class="tag">button</span>, <span class="tag">input</span>,</span><br><span class="line"> <span class="tag">textarea</span>, <span class="tag">th</span>, <span class="tag">td</span>, <span class="tag">img</span><span class="rules">&#123;  <span class="rule"><span class="attribute">border</span>:<span class="value">medium none</span></span>;  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;  <span class="rule">&#125;</span></span></span><br><span class="line"><span class="comment">/** 设置默认字体 **/</span>  </span><br><span class="line"><span class="tag">body</span>,<span class="tag">button</span>, <span class="tag">input</span>, <span class="tag">select</span>, <span class="tag">textarea</span> <span class="rules">&#123;  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">12px</span> ‘宋体’</span></span>; <span class="rule">&#125;</span></span></span><br><span class="line"><span class="tag">h1</span>, <span class="tag">h2</span>, <span class="tag">h3</span>, <span class="tag">h4</span>, <span class="tag">h5</span>, <span class="tag">h6</span> <span class="rules">&#123; <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">100%</span></span></span>; <span class="rule">&#125;</span></span>  </span><br><span class="line"><span class="tag">em</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-style</span>:<span class="value">normal</span></span>;<span class="rule">&#125;</span></span>  </span><br><span class="line"><span class="comment">/** 重置列表元素 **/</span>  </span><br><span class="line"><span class="tag">ul</span>, <span class="tag">ol</span> <span class="rules">&#123; <span class="rule"><span class="attribute">list-style</span>:<span class="value"> none</span></span>; <span class="rule">&#125;</span></span>  </span><br><span class="line"><span class="comment">/** 重置超链接元素 **/</span>  </span><br><span class="line"><span class="tag">a</span> <span class="rules">&#123; <span class="rule"><span class="attribute">text-decoration</span>:<span class="value"> none</span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#333</span></span></span>;<span class="rule">&#125;</span></span>  </span><br><span class="line"><span class="tag">a</span><span class="pseudo">:hover</span> <span class="rules">&#123; <span class="rule"><span class="attribute">text-decoration</span>:<span class="value"> underline</span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#F40</span></span></span>; <span class="rule">&#125;</span></span>  </span><br><span class="line"><span class="comment">/** 重置图片元素 **/</span>  </span><br><span class="line"><span class="tag">img</span><span class="rules">&#123; <span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">0px</span></span></span>;<span class="rule">&#125;</span></span>  </span><br><span class="line"><span class="comment">/** 重置表格元素 **/</span>  </span><br><span class="line"><span class="tag">table</span> <span class="rules">&#123; <span class="rule"><span class="attribute">border-collapse</span>:<span class="value"> collapse</span></span>; <span class="rule"><span class="attribute">border-spacing</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule">&#125;</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>引用外部CSS文件，不要写在HTML里面</p>
+</li>
+<li>使用YUI Compressor压缩上线样式文件</li>
+</ul>
+</blockquote>
+<h2 id="-Javascript">-Javascript</h2><blockquote>
+<ul>
+<li>Ajax 的内容如果想被爬虫检索，请使用“#！”。 <a href="https://support.google.com/webmasters/answer/174992?hl=zh-Hans" target="_blank" rel="external">点击，阅读详情</a><br>比如，Google发现新版twitter的URL如下：<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">http:</span>//twitter.com/<span class="preprocessor">#!/username</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>就会自动抓取另一个URL：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">http:</span><span class="comment">//twitter.com/?_escaped_fragment_=/username</span></span><br></pre></td></tr></table></figure></p>
+<p>通过这种机制，Google就可以索引动态的Ajax内容。</p>
+</blockquote>
+<h2 id="-公共部分">-公共部分</h2><blockquote>
+<ul>
+<li><p>设置Apache/Ngnix服务器的缓存策略，引用静态文件（CSS或者Javascrit）带版本号 <a href="http://www.lampweb.org/seo/4/14.html" target="_blank" rel="external">点击，阅读详情</a></p>
+</li>
+<li><p>大型网站SEO 流程要关注跟踪用户访问足迹，提高闭环。<a href="http://www.html5jq.com/fe/hulianwangzuixinzixun/2015/0304/56.html" target="_blank" rel="external">点击，阅读详情</a><br>举例网易地产如何做：<br>首先，明白流量是从哪里来，网易房产的流量绝大部分都是163.com引来的，百度搜索引擎比例第二，所以决定进行百度搜索引擎优化。<br>接着，迎合百度搜索引擎的特性，功能原理进行站内与站外seo工作，内容如下：<br>1、划分版块，制作站点地图，如站点地图_网易广州房产。方便蜘蛛读取内容；<br>2、优化各版块meta标签页，标题、关键词、描述、锚文本，h1。核心是关键词的选择，与锚文本链接；适当增添关键词密度；<br>3、找相关性较强的百度权重的网站进行友链交换；<br>4、在百度子产品，如百度词条加链接。</p>
+</li>
+<li><p>定期检测网站是否有死链，关键词密度<br><a href="http://tool.chinaz.com/Links/" target="_blank" rel="external">死链检测工具</a><br><a href="http://tool.chinaz.com/Tools/Density.aspx" target="_blank" rel="external">关键词密度</a><br><a href="http://link.chinaz.com/" target="_blank" rel="external">友链检测工具</a></p>
+</li>
+<li><p>关注百度站长网站，提交SiteMap，以及落地一些百度的优化建义。<br><a href="http://zhanzhang.baidu.com/optimization/index" target="_blank" rel="external">链接地址</a></p>
+</li>
+<li><p>结合“百度指数”，查询网站关键字的搜索频率。<br><a href="http://index.baidu.com/" target="_blank" rel="external">链接地址</a></p>
+</li>
+</ul>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>[TOC]</p>
+<blockquote>
+<p>Seo目标有两个，让用户更快获取我们的网站； 让搜索引擎爬虫更好地“阅读”我们的网站，抓取正确的关键字。</p>
+</blockquote>
+<h2 id="-HTML">-HTML</h2><blockquote>
+<u]]>
+    </summary>
+    
+      <category term="FE" scheme="http://yoursite.com/tags/FE/"/>
+    
+      <category term="SEO" scheme="http://yoursite.com/tags/SEO/"/>
+    
+      <category term="SEO FE" scheme="http://yoursite.com/categories/SEO-FE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[[HOW TO]搬迁WordPress&申请域名]]></title>
+    <link href="http://yoursite.com/2015/02/17/Transfer-wordpress-to-new-server/"/>
+    <id>http://yoursite.com/2015/02/17/Transfer-wordpress-to-new-server/</id>
+    <published>2015-02-17T02:12:16.000Z</published>
+    <updated>2015-02-17T01:25:49.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>Target:</strong><br>        本次搬迁WordPress主要是从原来的物理机搬迁到Ocean平台的VM，为了更加方便管理。WordPress是跑在Xampp Lite。</p>
+<p><strong>Job List:</strong></p>
+<ul>
+<li><strong>申请Ocean Windows虚拟机</strong> ：网站搬迁的目标机器，申请了和原来一样的Windows机器。</li>
+<li><strong>迁移Xampp Lite</strong> ：人品不好，绿色免安装的Xampp Lite在搬迁的时候遇到了一个Bug。</li>
+<li><strong>搬迁WordPress</strong> ：WordPress搬迁最大的问题解决博文还会往原来的机器跳转（因为不是重新安装Wordpress）</li>
+<li><strong>申请域名 &amp; 申请SSL</strong> ：内部流程比较复杂，审批较慢，得催。 </li>
+</ul>
+<h4 id="申请Ocean_Windows虚拟机：">申请Ocean Windows虚拟机：</h4><pre><code>简单介绍一下Ocean平台，网址:[<span class="link_label">点击传送门</span>](<span class="link_url">http://ocean.baidu.com/</span>)
+<span class="code">    ocean提供多样化的资源类型：云主机、物理机、虚拟机、MAC虚拟桌面等，满足开发测试差异化需求。</span>
+</code></pre><p>申请简单，只要点击激活按钮就可以了。<img src="/img/1417660922183.png" alt="Alt text"> </p>
+<p>申请成功后会有邮件通知，要登陆该VM，windows的用户使用winrelay，linux的用户使用relay，mac的比较特别，要用vnc工具。<a href="http://wiki.babel.baidu.com/twiki/bin/view/Com/Test/Ocean#2、使用方式" target="_blank" rel="external">点击传送门</a></p>
+<hr>
+<blockquote>
+<p><strong>特别注意:</strong><br>由于公司防火墙的原因，Windows机器只有8000~9000端是对外开放的（办公室网络连接IDC网络有这个约束，Ocean机器之间的网络是不走防火墙）。一开始我折腾了好久SFTP（默认端口21）都没有办法从便携连接过去，后来换了个8001端口就好了。</p>
+</blockquote>
+<h4 id="迁移Xampp_Lite：">迁移Xampp Lite：</h4><pre><code><span class="title">Xampp</span> 大家都懂，简单轻便的一个Apache+mysql平台，lite版本更加厉害，虽然没有提供filezilla和其他工具，但是不通机器之间迁移绝对一流。还可以做到U盘里面。
+</code></pre><p>迁移没撒好讲，在原来服务器压缩包，再搬迁到目标机器解压。<br>解压完毕之后有两个事情要做：</p>
+<ul>
+<li><p>relocate xmapp服务的位置。<img src="/img/1417662706878.png" alt="Alt text"></p>
+</li>
+<li><p>把xmapp注册到windwows的服务里面，做了之后，windows机器重启，xmapp服务也能自动拉起。<img src="/img/1417662753365.png" alt="Alt text"></p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p><strong>特别注意:</strong><br>哥人品一般都不是很好，搬迁完Xampp之后，apache和mysql的服务都是杠杠的。但是网站却没有办法成功进入，从错误报告看出来是Wordpress访问数据库失败了，后来通过mysql的工具检查了一下，发现原来数据库文件损坏了，有些表没有办法读取出来。所以搬迁的时候建议把apache&amp;mysql服务先关闭，减少这样的问题发生。</p>
+</blockquote>
+<h4 id="搬迁WordPress：">搬迁WordPress：</h4><ul>
+<li><p>搬迁Xampp的时候其实已经把Wordpress迁移到新的服务器了，但是还需要一下配置项。（因为安装wordpress时会记录之前博客的IP等信息）<a href="http://codex.wordpress.org/Changing_The_Site_URL" target="_blank" rel="external">点击传送门</a></p>
+</li>
+<li><p>完成后，<a href="http://your_new_server_ip" target="_blank" rel="external">http://your_new_server_ip</a> 就不会跳转回去原来的服务器了。</p>
+</li>
+<li>wordpress部门posts是记录了IP的，这样我们的文章一打开还是会跳转到原来的服务器，针对这个问题，我本地安装了Mysql Workbench，远程连接到新服务器的mysql，一把将wp<em>*</em>_posts表里面带有原来服务器ip和域名的posts全改了。</li>
+</ul>
+<h4 id="申请域名_&amp;_申请SSL：">申请域名 &amp; 申请SSL：</h4><pre><code>申请域名和ssl之前先要啃两篇硬货，讲得太好。
+    - [域名申请](http:<span class="regexp">//wiki</span>.babel.baidu.com/twiki/bin/view/Com/Test/<span class="variable">%E5</span><span class="variable">%9F</span><span class="variable">%9F</span><span class="variable">%E5</span><span class="variable">%90</span><span class="variable">%8D</span><span class="variable">%E7</span><span class="variable">%94</span><span class="variable">%B3</span><span class="variable">%E8</span><span class="variable">%AF</span><span class="variable">%B7</span>)
+    - [https 和 ssl 申请](http:<span class="regexp">//wiki</span>.babel.baidu.com/twiki/bin/view/Ps/OP/ECOMOP_SHIFENOP_SRE1_SYSTEM_HTTPS)
+</code></pre><p>证书申请下来后，把对应的<em>.key, </em>.cer, *.csr Xampp Apache config下对应的目录即可。重启一下Apache，整个搬迁流程就结束了。</p>
+<hr>
+<blockquote>
+<p><strong>特别注意:</strong><br>域名申请需要的权限较大，部门OP管理员才有的。一般来讲如果自己不能申请，就找OP管理员处理把。<br>整个搬迁流程耗时最久的是等待审批（域名审批、SSL文件审批），建议在开始弄之前就着手准备这两个事情。</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>Target:</strong><br>        本次搬迁WordPress主要是从原来的物理机搬迁到Ocean平台的VM，为了更加方便管理。WordPress是跑在Xampp Lite。</p>
+<p><strong>Job List:</stron]]>
+    </summary>
+    
+      <category term="HTTPS" scheme="http://yoursite.com/tags/HTTPS/"/>
+    
+      <category term="SSL" scheme="http://yoursite.com/tags/SSL/"/>
+    
+      <category term="WordPress" scheme="http://yoursite.com/tags/WordPress/"/>
+    
+      <category term="XAMPP" scheme="http://yoursite.com/tags/XAMPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[蒲公英体验报告]]></title>
+    <link href="http://yoursite.com/2015/01/12/pgyer-experience/"/>
+    <id>http://yoursite.com/2015/01/12/pgyer-experience/</id>
+    <published>2015-01-12T08:54:19.000Z</published>
+    <updated>2015-02-17T01:25:49.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>Target: </strong><br>简化花果山APP优化流程，学习蒲公英网站的发布流程。</p>
+</blockquote>
+<h2 id="1-_发布流程流程图">1. 发布流程流程图</h2><p><img src="/img/pgyer_ (5).png" alt="发布流程流程图" title="发布流程流程图" width="800"></p>
+<h2 id="2-_流程截图">2. 流程截图</h2><h3 id="2-1_注册用户，点击发布APP">2.1 注册用户，点击发布APP</h3><blockquote>
+<p>注册流程只需要绑定用户邮箱<br>优点：相对简单<br>不足：蒲公英没有用户没有分组功能，不能对APP进行用户粒度的分组</p>
+</blockquote>
+<p><img src="/img/pgyer_ (4).png" alt="注册用户，点击发布APP" title="注册用户，点击发布APP" width="800"></p>
+<h3 id="2-2_上传APP，并填写资料">2.2 上传APP，并填写资料</h3><blockquote>
+<p>支持拖拽的方式上传文件</p>
+</blockquote>
+<p><img src="/img/pgyer_ (1).jpg" alt="上传" title="上传" width="800"></p>
+<blockquote>
+<p>上传后，填写该APP的基本信息。为了简化用户输入的内容，该页面会提取APP的特征信息，然后到Apple Store获取发布版本的数据。<br>优点：该页面相对简化每次注册APP的成本，通过获取商城的信息作为基本内容。<br>不足：内容需要开发者整理，不能做到智能获取。</p>
+</blockquote>
+<p><img src="/img/pgyer_ (2).png" alt="填写资料" title="填写资料" width="800"></p>
+<h3 id="2-3_生成短链接，手机访问页面下载，并且可以查看APP相关信息">2.3 生成短链接，手机访问页面下载，并且可以查看APP相关信息</h3><blockquote>
+<p>用户下载页面。<br>优点：页面在手机查看比较好看、发布不常用的信息放在需要往下滚动的地方，方便。体验链接：<a href="http://www.pgyer.com/pXGU" target="_blank" rel="external">http://www.pgyer.com/pXGU</a></p>
+</blockquote>
+<p><img src="/img/pgyer_ (1).png" alt="上传" title="上传" width="800"></p>
+<h3 id="2-3_蒲公英特色服务">2.3 蒲公英特色服务</h3><blockquote>
+<h4 id="a-_开放API，通过API来触发APP发布，可以集成在Jenkins_Jobs当中。">a. 开放API，通过API来触发APP发布，可以集成在Jenkins Jobs当中。</h4><h4 id="b-_活跃度较高的App会推广给普通用户。">b. 活跃度较高的App会推广给普通用户。</h4></blockquote>
+<p><img src="/img/pgyer_ (3).png" alt="上传" title="上传" width="800"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p><strong>Target: </strong><br>简化花果山APP优化流程，学习蒲公英网站的发布流程。</p>
+</blockquote>
+<h2 id="1-_发布流程流程图">1. 发布流程流程图</h2><p><img src="/i]]>
+    </summary>
+    
+      <category term="APP发布" scheme="http://yoursite.com/tags/APP%E5%8F%91%E5%B8%83/"/>
+    
+      <category term="体验报告" scheme="http://yoursite.com/tags/%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="花果山" scheme="http://yoursite.com/tags/%E8%8A%B1%E6%9E%9C%E5%B1%B1/"/>
+    
+      <category term="蒲公英" scheme="http://yoursite.com/tags/%E8%92%B2%E5%85%AC%E8%8B%B1/"/>
+    
+      <category term="体验报告" scheme="http://yoursite.com/categories/%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+</feed>
